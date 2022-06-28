@@ -3,8 +3,7 @@ from django.urls import path, include
 from rest_framework.authtoken import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('server.da_day.urls')),
+    path('', admin.site.urls),
     path('auth/', include('server.auth_app.urls')),
     path('api-token-auth/', views.obtain_auth_token),
     path('chat/', include('server.chats_app.urls'))
